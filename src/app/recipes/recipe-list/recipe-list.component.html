@@ -1,19 +1,33 @@
 
 <div class="row">
-
   <div class="col-xs-12">
     <button class="btn btn-success">New Recipe</button>
   </div>
 </div>
+<hr>
 <div class="row">
-  <div class="col-xs-12">
-    <a href="#" class="list-group-item clearfix" *ngFor="let r of recipes ">
-    <div class="pull-left">
-      <h4 class="list-group-item-heading">{{r.name}}</h4>
-       <p class="list-group-item-text">{{r.description}}</p>
-    </div>
-      <span class="pull-right"><img src="{{r.imagePath}}" alt="" class="img-fluid" style="max-height: 50px;"></span>
-    </a>
+  <div class="col-xs-12 ">
+    <ul class="list-group">
+      <a href="#" class="list-group-item clearfix " *ngFor="let r of recipes " style="color: inherit">
+        <div class="float-start">
+          <h4>{{r.name}}</h4>
+          <p>{{r.description}}</p>
+        </div>
+        <span class="float-end"><img src="{{r.imagePath}}" alt="" class="img-fluid" style="max-height: 50px;"></span>
+      </a>
+     <div style="height:4px"></div>
+      <a href="#" class="list-group-item clearfix " *ngFor="let r of recipes " style="color: inherit">
+        <div class="float-start">
+          <h4>{{r.name}}</h4>
+          <p>{{r.description}}</p>
+        </div>
+        <span class="float-end"><img src="{{r.imagePath}}" alt="" class="img-fluid" style="max-height: 50px;"></span>
+      </a>
+
+
+    </ul>
+
+
     <app-recipe-item />
   </div>
 </div>

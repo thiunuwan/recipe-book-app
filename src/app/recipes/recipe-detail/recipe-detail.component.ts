@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./recipe-detail.component.css']
 })
 export class RecipeDetailComponent {
+dropdownStatus=false;
+  toggleDropDown(){
+    this.dropdownStatus=!this.dropdownStatus;
+  }
 
 }
